@@ -5,7 +5,6 @@
 
             <div class="relative w-full max-w-7xl text-left bg-gray-800/95 backdrop-blur-sm shadow-xl rounded-2xl border border-white/10 overflow-hidden max-h-[95vh] sm:max-h-[90vh]"
                  @click.stop>
-                <!-- Botón cerrar (cruz) - siempre visible -->
                 <button type="button"
                         @click="closeModal"
                         aria-label="Cerrar modal"
@@ -16,15 +15,12 @@
                 </button>
 
                 <div class="flex flex-col max-h-[95vh] sm:max-h-[90vh]">
-                    <!-- Encabezado (padding-right para no solaparse con el botón) -->
                     <div class="px-4 pt-4 pb-3 pr-14 sm:px-6 sm:pt-6 sm:pb-4 sm:pr-6 bg-gray-800/95 backdrop-blur-sm sticky top-0 z-10 shrink-0">
                         <h3 class="text-lg sm:text-xl font-bold text-white">{{ project.title }}</h3>
                         <p class="text-gray-400 mt-1 text-xs sm:text-sm">{{ project.shortInfo }}</p>
                     </div>
 
-                    <!-- Contenido scrolleable -->
                     <div class="overflow-y-auto overflow-x-hidden min-h-0">
-                        <!-- Visor de imágenes -->
                         <div class="w-full bg-gray-900/50 backdrop-blur-sm">
                             <ModalImageViewer 
                                 v-if="project"
@@ -35,24 +31,19 @@
                             />
                         </div>
 
-                        <!-- Información: 1 columna en móvil, 2 en desktop; más aire en móvil -->
                         <div class="px-4 pb-6 pt-4 sm:px-8 sm:pb-8 sm:pt-5 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" v-if="project">
-                            <!-- Columna izquierda -->
                             <div class="space-y-5 sm:space-y-4">
-                                <!-- Nota de privacidad -->
                                 <div v-if="project.isPrivate">
                                     <div class="p-3 bg-primary/10 rounded-lg border border-primary/20">
                                         <p class="text-primary text-sm">{{ project.privateNote }}</p>
                                     </div>
                                 </div>
 
-                                <!-- Descripción -->
                                 <div>
                                     <h4 class="text-sm font-semibold text-white/90 mb-2">Descripción</h4>
                                     <p class="text-gray-400 text-sm leading-relaxed">{{ project.description }}</p>
                                 </div>
 
-                                <!-- Enlaces de prensa -->
                                 <div v-if="project.pressLinks && project.pressLinks.length > 0">
                                     <h4 class="text-sm font-semibold text-white/90 mb-2">Menciones en Prensa</h4>
                                     <div class="space-y-2">
@@ -81,7 +72,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Logros y Características -->
                                 <div v-if="project.highlights && project.highlights.length > 0">
                                     <h4 class="text-sm font-semibold text-white/90 mb-2">Logros y Características</h4>
                                     <ul class="space-y-2">
@@ -94,9 +84,7 @@
                                 </div>
                             </div>
 
-                            <!-- Columna derecha -->
                             <div class="space-y-5 sm:space-y-4">
-                                <!-- Tecnologías -->
                                 <div>
                                     <h4 class="text-sm font-semibold text-white/90 mb-2">Tecnologías</h4>
                                     <div class="grid grid-cols-2 gap-2 sm:gap-2">
@@ -109,7 +97,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Botones de acción -->
                                 <div class="flex flex-col sm:flex-row gap-2 pt-1">
                                     <a v-if="project.demoUrl"
                                        :href="project.demoUrl"

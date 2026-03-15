@@ -6,7 +6,6 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Favicon (SVG prioritario; ?v=2 evita caché antigua) -->
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=2">
         <link rel="alternate icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 

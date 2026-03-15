@@ -6,7 +6,12 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// One Page Portfolio Route
+Route::get('/sitemap.xml', function () {
+    return response()
+        ->view('sitemap', [], 200, ['Content-Type' => 'application/xml'])
+        ->header('Content-Type', 'application/xml');
+})->name('sitemap');
+
 Route::get('/', [PortfolioController::class, 'home'])->name('home');
 
 // Contact form submission

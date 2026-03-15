@@ -1,0 +1,38 @@
+<template>
+    <Head title="Portfolio" />
+    
+    <div class="min-h-screen bg-gray-850">
+        <!-- Navigation -->
+        <SideNavigation @navigate="scrollToSection" />
+        <MobileNavigation @navigate="scrollToSection" />
+
+        <!-- Progress Bar -->
+        <div class="fixed top-0 left-0 w-full h-1 bg-gray-750 z-40">
+            <div 
+                class="h-full bg-primary transition-all duration-300"
+                :style="{ width: scrollProgress + '%' }"
+            ></div>
+        </div>
+
+        <!-- Sections -->
+        <HeroSection @navigate="scrollToSection" />
+        <ProjectsSection />
+        <SkillsSection />
+        <AboutSection @navigate="scrollToSection" />
+        <ContactSection />
+    </div>
+</template>
+
+<script setup>
+import { Head } from '@inertiajs/vue3';
+import { useNavigation } from '@/composables/useNavigation';
+import SideNavigation from '@/Components/navigation/SideNavigation.vue';
+import MobileNavigation from '@/Components/navigation/MobileNavigation.vue';
+import HeroSection from '@/Components/sections/HeroSection.vue';
+import ProjectsSection from '@/Components/sections/ProjectsSection.vue';
+import SkillsSection from '@/Components/sections/SkillsSection.vue';
+import AboutSection from '@/Components/sections/AboutSection.vue';
+import ContactSection from '@/Components/sections/ContactSection.vue';
+
+const { scrollProgress, scrollToSection } = useNavigation();
+</script>

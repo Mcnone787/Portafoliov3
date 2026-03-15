@@ -1,0 +1,60 @@
+                <!-- Tabs de categorías -->
+                <div class="flex flex-wrap gap-4 mb-8 justify-center">
+                    <button
+                        v-for="category in categories"
+                        :key="category.id"
+                        @click="selectedCategory = category.id"
+                        class="px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-300"
+                        :class="selectedCategory === category.id ? 'bg-primary text-white' : 'bg-gray-800/50 text-gray-400 hover:bg-gray-800'"
+                    >
+                        <TechIcon :name="category.icon" class="w-5 h-5" />
+                        <span>{{ category.name }}</span>
+                    </button>
+                </div>
+
+                <!-- Contenido de la categoría seleccionada -->
+                <div class="card">
+                    <TransitionGroup
+                        enter-active-class="transition-all duration-300 ease-out"
+                        enter-from-class="opacity-0 transform scale-95"
+                        enter-to-class="opacity-100 transform scale-100"
+                        leave-active-class="transition-all duration-200 ease-in"
+                        leave-from-class="opacity-100 transform scale-100"
+                        leave-to-class="opacity-0 transform scale-95"
+                    >
+                        <div v-for="category in categories" :key="category.id" v-show="selectedCategory === category.id">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div
+                                    v-for="(tech, index) in getDisplayedTechs(category.id)"
+                                    :key="tech.name"
+                                    class="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
+                                    :class="{
+                                        'animate-fade-in-up': index >= 6,
+                                        'opacity-0 translate-y-4': index >= 6
+                                    }"
+                                >
+                                    <TechIcon :name="tech.icon" />
+                                    <span class="text-sm text-gray-400 text-center">{{ tech.name }}</span>
+                                </div>
+                            </div>
+                            
+                            <div v-if="hasMoreTechs(category.id)" class="flex justify-center mt-6">
+                                <button
+                                    @click="showAll[category.id] = !showAll[category.id]"
+                                    class="text-sm text-primary hover:text-primary/80 flex items-center gap-2 transition-colors duration-300"
+                                >
+                                    <span>{{ showAll[category.id] ? 'Ver menos' : 'Ver más tecnologías' }}</span>
+                                    <svg
+                                        class="w-4 h-4 transition-transform duration-300"
+                                        :class="{ 'rotate-180': showAll[category.id] }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </TransitionGroup>
+                </div>

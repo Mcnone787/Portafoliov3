@@ -55,11 +55,6 @@
         <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        @if(config('services.recaptcha.site_key'))
-        <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async></script>
-        <style>.grecaptcha-badge { z-index: 9999 !important; }</style>
-        @endif
-
         <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
@@ -70,5 +65,19 @@
         <main id="main-content" role="main">
             @inertia
         </main>
+
+        @php
+            $recaptchaEnabled = config('googlerecaptchav3.is_service_enabled') && config('googlerecaptchav3.site_key')
+                && class_exists(\TimeHunter\LaravelGoogleReCaptchaV3\Facades\GoogleReCaptchaV3::class);
+        @endphp
+        @if($recaptchaEnabled)
+        <script>window.__RECAPTCHA_SITE_KEY = @json(config('googlerecaptchav3.site_key'));</script>
+        {!! \TimeHunter\LaravelGoogleReCaptchaV3\Facades\GoogleReCaptchaV3::init() !!}
+        <style>
+        .grecaptcha-badge{
+            bottom:7% !important;
+        }
+        </style>
+        @endif
     </body>
 </html>

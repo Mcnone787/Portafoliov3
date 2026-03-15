@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Inertia\Inertia;
+use TimeHunter\LaravelGoogleReCaptchaV3\Facades\GoogleReCaptchaV3;
 
 class PortfolioController extends Controller
 {
@@ -15,35 +15,33 @@ class PortfolioController extends Controller
 
     public function sendMessage(Request $request)
     {
+        $recaptchaToken = $request->input('g-recaptcha-response') ?: $request->input('recaptcha_token');
+
+        $request->merge(['g-recaptcha-response' => $recaptchaToken]);
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string|max:255',
             'message' => 'required|string|max:1000',
-            'recaptcha_token' => 'required|string',
+            'g-recaptcha-response' => 'required|string',
+        ], [
+            'name.required' => 'El nombre es obligatorio.',
+            'email.required' => 'El email es obligatorio.',
+            'email.email' => 'Introduce un email válido.',
+            'subject.required' => 'El asunto es obligatorio.',
+            'message.required' => 'El mensaje es obligatorio.',
+            'g-recaptcha-response.required' => 'Debes completar la verificación de reCAPTCHA. Recarga la página e inténtalo de nuevo.',
         ]);
 
-        $secret = config('services.recaptcha.secret');
-        if ($secret) {
-            $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-                'secret' => $secret,
-                'response' => $request->recaptcha_token,
-            ]);
+        $verified = GoogleReCaptchaV3::setAction('contact')
+            ->verifyResponse($recaptchaToken, $request->getClientIp());
 
-            $body = $response->json();
-            if (! ($body['success'] ?? false)) {
-                return response()->json([
-                    'message' => 'Error de verificación. Inténtalo de nuevo.',
-                ], 422);
-            }
-
-            $score = $body['score'] ?? 0;
-            $threshold = (float) config('services.recaptcha.score_threshold', 0.5);
-            if (isset($body['score']) && $score < $threshold) {
-                return response()->json([
-                    'message' => 'No hemos podido verificar que no eres un robot. Inténtalo de nuevo.',
-                ], 422);
-            }
+        if (! $verified->isSuccess()) {
+            return response()->json([
+                'message' => $verified->getMessage() ?: 'La verificación reCAPTCHA ha fallado. Comprueba que las claves (site key y secret key) sean correctas y que el dominio esté autorizado en Google reCAPTCHA.',
+                'errors' => ['g-recaptcha-response' => [$verified->getMessage() ?: 'Verificación reCAPTCHA no válida.']],
+            ], 422);
         }
 
         return response()->json([

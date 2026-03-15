@@ -178,9 +178,11 @@
 <script setup>
 import { ref } from 'vue';
 import ParticlesBackground from '@/Components/ParticlesBackground.vue';
-import axios from 'axios';
 
-const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+function getSiteKey() {
+    if (typeof window === 'undefined') return '';
+    return window.__RECAPTCHA_SITE_KEY || import.meta.env.VITE_RECAPTCHA_SITE_KEY || '';
+}
 
 const loading = ref(false);
 const errorMessage = ref('');
@@ -193,13 +195,24 @@ const form = ref({
 
 function getRecaptchaToken() {
     return new Promise((resolve, reject) => {
+        const siteKey = getSiteKey();
+        if (!siteKey) {
+            reject(new Error('reCAPTCHA no está configurado. Recarga la página.'));
+            return;
+        }
         if (!window.grecaptcha) {
-            reject(new Error('reCAPTCHA no cargado'));
+            reject(new Error('reCAPTCHA aún no ha cargado. Espera un momento y vuelve a intentarlo.'));
             return;
         }
         window.grecaptcha.ready(() => {
             window.grecaptcha.execute(siteKey, { action: 'contact' })
-                .then(resolve)
+                .then((token) => {
+                    if (!token || typeof token !== 'string' || token.length < 10) {
+                        reject(new Error('No se pudo obtener la verificación. Recarga la página e inténtalo de nuevo.'));
+                    } else {
+                        resolve(token);
+                    }
+                })
                 .catch(reject);
         });
     });
@@ -211,18 +224,35 @@ const submitForm = async () => {
 
     try {
         const token = await getRecaptchaToken();
-        const { data } = await axios.post(route('contact.send'), {
+        if (!token) {
+            errorMessage.value = 'No se pudo completar la verificación de reCAPTCHA. Recarga la página e inténtalo de nuevo.';
+            loading.value = false;
+            return;
+        }
+        const { data } = await window.axios.post(route('contact.send'), {
             name: form.value.name,
             email: form.value.email,
             subject: form.value.subject,
             message: form.value.message,
-            recaptcha_token: token,
+            'g-recaptcha-response': token,
+        }, {
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         });
 
         form.value = { name: '', email: '', subject: '', message: '' };
         alert(data.message || '¡Mensaje enviado con éxito!');
     } catch (err) {
-        const msg = err.response?.data?.message || 'Error al enviar. Inténtalo de nuevo.';
+        const data = err.response?.data;
+        let msg = 'Error al enviar. Inténtalo de nuevo.';
+        if (err.message && !err.response) {
+            msg = err.message;
+        } else if (data?.message) {
+            msg = data.message;
+        }
+        if (data?.errors && typeof data.errors === 'object') {
+            const firstError = Object.values(data.errors).flat().find(Boolean);
+            if (firstError) msg = firstError;
+        }
         errorMessage.value = msg;
     } finally {
         loading.value = false;

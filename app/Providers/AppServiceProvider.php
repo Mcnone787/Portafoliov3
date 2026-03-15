@@ -26,5 +26,13 @@ class AppServiceProvider extends ServiceProvider
         }
 
         Vite::prefetch(concurrency: 3);
+
+        // PHP 8.4+: evitar 500 por el aviso de tempnam() en directorio temporal del sistema
+        set_error_handler(function ($severity, $message, $file, $line) {
+            if ($severity === E_WARNING && strpos($message, 'tempnam(): file created in the system') !== false) {
+                return true;
+            }
+            return false;
+        }, E_WARNING);
     }
 }

@@ -1,61 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portafolio personal – Adrià M.D.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Portafolio web con proyectos, sobre mí y contacto. Desplegado en **[www.adriamd.com](https://www.adriamd.com)**.
 
-## About Laravel
+## Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Backend:** [Laravel](https://laravel.com) 12  
+- **Frontend:** [Vue 3](https://vuejs.org) + [Inertia.js](https://inertiajs.com)  
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com)  
+- **Build:** [Vite](https://vitejs.dev)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requisitos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP 8.2+
+- Composer  
+- Node.js 20+ (recomendado; también funciona con 18 usando `--legacy-peer-deps`)  
+- npm o pnpm  
 
-## Learning Laravel
+## Instalación local
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+# Clonar
+git clone https://github.com/Mcnone787/Portafoliov3.git
+cd Portafoliov3
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Dependencias PHP
+composer install
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Dependencias JS (Node 18: usar --legacy-peer-deps)
+npm ci
+npm run build
 
-## Laravel Sponsors
+# Configuración
+cp .env.example .env
+php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Opcional: enlace para storage público (si usas subidas)
+php artisan storage:link
+```
 
-### Premium Partners
+Las **imágenes** del portafolio (`public/images/`) no están en el repositorio. Para ver proyectos con imágenes en local, añade las carpetas/archivos necesarios en `public/images/` (por ejemplo copiándolas del servidor o de un backup).
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Desarrollo
 
-## Contributing
+```bash
+# Servidor Laravel
+php artisan serve
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# En otra terminal: build de assets en modo watch
+npm run dev
+```
 
-## Code of Conduct
+Abre `http://localhost:8000`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Despliegue
 
-## Security Vulnerabilities
+En producción, el documento raíz del servidor web debe apuntar a la carpeta **`public`**. Ejemplo Apache:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```apache
+DocumentRoot /ruta/al/proyecto/public
+```
 
-## License
+Después de desplegar: `php artisan config:cache`, `php artisan view:cache` y permisos de escritura en `storage/` y `bootstrap/cache/` para el usuario del servidor web.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Licencia
+
+Proyecto personal. Código bajo [MIT](https://opensource.org/licenses/MIT). Las imágenes y contenidos del portafolio son de uso personal.

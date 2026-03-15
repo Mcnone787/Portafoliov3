@@ -39,17 +39,25 @@ let animationFrame = null;
 let particles = [];
 let mouse = { x: null, y: null };
 
+// En móvil menos partículas para no saturar; en desktop se mantiene el count original
+const getEffectiveParticleCount = () => {
+    const w = window.innerWidth;
+    if (w < 640) return Math.floor(props.config.particleCount * 0.28);  // ~34 en móvil
+    if (w < 768) return Math.floor(props.config.particleCount * 0.4);   // ~48
+    if (w < 1024) return Math.floor(props.config.particleCount * 0.65);   // ~78
+    return props.config.particleCount;
+};
+
 // Calcular cantidad de partículas y tamaño basado en el viewport
 const calculateParticleSettings = (width, height) => {
     const viewportArea = window.innerWidth * window.innerHeight;
-    const sectionArea = width * height;
     const baseArea = 1920 * 1080; // Área de referencia
     
-    // Mantener una densidad consistente de partículas
+    // Mantener una densidad consistente de partículas (solo para tamaño/líneas)
     const densityFactor = Math.min(1.5, Math.max(0.5, viewportArea / baseArea));
-    const particleCount = Math.floor(props.config.particleCount * densityFactor);
+    const particleCount = getEffectiveParticleCount();
     
-    // Ajustar el tamaño de las partículas según el viewport, no la sección
+    // Ajustar el tamaño de las partículas según el viewport
     const baseSize = props.config.particleSize;
     const sizeScale = Math.min(1.2, Math.max(0.8, Math.sqrt(viewportArea) / Math.sqrt(baseArea)));
     const particleSize = baseSize * sizeScale;
@@ -123,9 +131,8 @@ const initParticles = () => {
             p.vy = (Math.random() - 0.5) * props.config.particleSpeed;
         });
 
-        // Añadir o remover partículas si es necesario
-        // Mantener el número de partículas original
-        const targetCount = props.config.particleCount;
+        // Añadir o remover partículas según viewport (menos en móvil)
+        const targetCount = getEffectiveParticleCount();
         
         if (particles.length > targetCount) {
             particles = particles.slice(0, targetCount);

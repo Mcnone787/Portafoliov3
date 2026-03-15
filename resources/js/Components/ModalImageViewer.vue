@@ -1,5 +1,5 @@
 <template>
-    <div class="relative flex items-center justify-center h-[400px] group">
+    <div class="relative flex items-center justify-center h-[240px] sm:h-[320px] md:h-[400px] group">
         <!-- Carrusel de imágenes -->
         <div class="w-full h-full overflow-hidden">
             <!-- Imágenes -->

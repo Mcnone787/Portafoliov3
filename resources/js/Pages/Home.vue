@@ -1,5 +1,5 @@
 <template>
-    <Head title="Adria Moya Duran" />
+    <Head title="Adrià Moya" />
     
     <div class="min-h-screen bg-gray-850">
         <!-- Navigation -->

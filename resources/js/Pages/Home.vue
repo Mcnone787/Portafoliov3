@@ -1,5 +1,8 @@
 <template>
-    <Head title="Adrià Moya" />
+    <Head>
+        <title>Adrià Moya — Desarrollador web full-stack | Portafolio</title>
+        <meta name="description" content="Portafolio de Adrià Moya Duran. Desarrollador web full-stack con Laravel, Vue.js y tecnologías modernas. Proyectos y contacto." />
+    </Head>
     
     <div class="min-h-screen bg-gray-850">
         <SideNavigation @navigate="scrollToSection" />
@@ -12,11 +15,13 @@
             ></div>
         </div>
 
-        <HeroSection @navigate="scrollToSection" />
-        <ProjectsSection />
-        <SkillsSection />
-        <AboutSection @navigate="scrollToSection" />
-        <ContactSection />
+        <div>
+            <HeroSection @navigate="scrollToSection" />
+            <ProjectsSection />
+            <SkillsSection />
+            <AboutSection @navigate="scrollToSection" />
+            <ContactSection />
+        </div>
 
         <transition
             enter-active-class="transition duration-300 ease-out"

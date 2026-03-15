@@ -28,12 +28,12 @@
                         </p>
                     </div>
                     <div class="flex justify-center lg:justify-start gap-4">
-                        <button @click="$emit('navigate', 'proyectos')" class="btn-primary">
-                            <CodeBracketIcon class="w-5 h-5 mr-2 inline-block" />
+                        <button type="button" @click="$emit('navigate', 'proyectos')" class="btn-primary" aria-label="Ir a la sección de proyectos">
+                            <CodeBracketIcon class="w-5 h-5 mr-2 inline-block" aria-hidden="true" />
                             Ver Proyectos
                         </button>
-                        <button @click="$emit('navigate', 'contacto')" class="btn-outline">
-                            <EnvelopeIcon class="w-5 h-5 mr-2 inline-block" />
+                        <button type="button" @click="$emit('navigate', 'contacto')" class="btn-outline" aria-label="Ir a la sección de contacto">
+                            <EnvelopeIcon class="w-5 h-5 mr-2 inline-block" aria-hidden="true" />
                             Contactar
                         </button>
                     </div>
@@ -48,8 +48,7 @@
                             
                             <div class="absolute inset-2 rounded-full overflow-hidden border-2 border-primary/50 p-2">
                                 <div class="w-full h-full rounded-full overflow-hidden bg-gray-750 flex items-center justify-center">
-                                    <img src="images/profile.jpg"     class="w-full h-full object-cover" 
-                                    alt="Adria Moya Duran">
+                                    <img src="images/profile.jpg" class="w-full h-full object-cover" alt="Adrià Moya Duran, desarrollador web full-stack">
                                     <!-- <UserIcon class="w-48 h-48 text-primary/40" /> -->
                                 </div>
                             </div>

@@ -92,8 +92,10 @@
                         
                         <div class="flex flex-col sm:flex-row gap-2 mt-4">
                             <button 
+                                type="button"
                                 @click="selectedProject = project"
-                                class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3"
+                                class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3 min-h-[44px]"
+                                :aria-label="`Ver más sobre ${project.title}`"
                             >
                                 Ver más
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,9 +138,11 @@
                 </TransitionGroup>
 
                 <div v-if="hasMoreProjects" class="flex justify-center mt-8">
-                    <button @click="showMoreProjects" 
+                    <button type="button"
+                            @click="showMoreProjects" 
                             :disabled="isLoading"
-                            class="btn-outline group relative overflow-hidden">
+                            class="btn-outline group relative overflow-hidden min-h-[44px]"
+                            aria-label="Cargar más proyectos">
                         <span class="relative z-10 flex items-center">
                             <span v-if="isLoading" class="mr-2">
                                 <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

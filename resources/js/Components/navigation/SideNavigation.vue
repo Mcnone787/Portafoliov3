@@ -20,11 +20,14 @@
                 ></div>
 
                 <div class="space-y-8">
-                    <div 
+                    <button 
                         v-for="(item, index) in navigation" 
                         :key="item.id"
+                        type="button"
                         @click="$emit('navigate', item.id)"
-                        class="group flex items-center cursor-pointer"
+                        class="group flex items-center cursor-pointer w-full text-left min-h-[44px] py-1"
+                        :aria-label="`Ir a ${item.name}`"
+                        :aria-current="activeSection === item.id ? 'true' : undefined"
                     >
                         <div class="relative">
                             <div 
@@ -33,20 +36,17 @@
                             ></div>
                         </div>
                         
-                        <div class="flex items-center mt-1">
-                       
-                            <span 
-                                class="ml-3 text-sm font-medium transition-colors duration-300 ease-out"
-                                :class="[
-                                    activeSection === item.id 
-                                        ? 'text-primary' 
-                                        : 'text-gray-400'
-                                ]"
-                            >
-                                {{ item.name }}
-                            </span>
-                        </div>
-                    </div>
+                        <span 
+                            class="ml-3 text-sm font-medium transition-colors duration-300 ease-out"
+                            :class="[
+                                activeSection === item.id 
+                                    ? 'text-primary' 
+                                    : 'text-gray-400'
+                            ]"
+                        >
+                            {{ item.name }}
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>

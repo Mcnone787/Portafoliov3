@@ -8,6 +8,22 @@
     }
 }
 
+/* Enlace de salto: solo para lectores de pantalla (invisible, pero enfocable) */
+.skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.skip-link:focus {
+    /* Se mantiene oculto visualmente; accesible por teclado y lectores de pantalla */
+}
+
 @layer components {
     .btn-primary {
         @apply bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-200 font-medium;

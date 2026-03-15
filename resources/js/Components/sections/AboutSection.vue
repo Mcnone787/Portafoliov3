@@ -27,8 +27,7 @@
                         
                         <div class="absolute inset-2 rounded-full overflow-hidden border-2 border-primary/50 p-2">
                             <div class="w-full h-full rounded-full overflow-hidden bg-gray-750 flex items-center justify-center">
-                                <img src="images/profile.jpg"     class="w-full h-full object-cover" 
-                                alt="Adria Moya Duran">
+                                <img src="images/profile.jpg" class="w-full h-full object-cover" alt="Adrià Moya Duran, desarrollador full-stack en Girona" loading="lazy" width="256" height="256">
                                 <!-- <UserIcon class="w-32 h-32 text-primary/40" /> -->
                             </div>
                         </div>
@@ -38,8 +37,8 @@
                         Desarrollador apasionado que ve cada proyecto como un emocionante rompecabezas, transformando desafíos en soluciones creativas a través del código.
                     </p>
                     <div class="flex justify-center lg:justify-start gap-4">
-                        <button class="btn-primary">Descargar CV</button>
-                        <button @click="$emit('navigate', 'contacto')" class="btn-outline">Contactar</button>
+                        <button type="button" class="btn-primary" aria-label="Descargar currículum en PDF">Descargar CV</button>
+                        <button type="button" @click="$emit('navigate', 'contacto')" class="btn-outline" aria-label="Ir a la sección de contacto">Contactar</button>
                     </div>
                 </div>
 

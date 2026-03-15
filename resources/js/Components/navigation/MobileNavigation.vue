@@ -3,8 +3,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-end h-16">
                 <button 
+                    type="button"
                     @click="toggleMobileMenu"
-                    class="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    class="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                    :aria-label="mobileMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+                    :aria-expanded="mobileMenuOpen"
                 >
                     <svg 
                         class="w-6 h-6 transition-colors duration-200"

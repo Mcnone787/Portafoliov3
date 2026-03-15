@@ -57,20 +57,24 @@
 
             <button 
                 v-if="images.length > 1"
+                type="button"
                 @click.stop="previousImage"
-                class="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer z-20"
+                class="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 min-w-[44px] min-h-[44px] bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer z-20"
+                aria-label="Imagen anterior"
             >
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
 
             <button 
                 v-if="images.length > 1"
+                type="button"
                 @click.stop="nextImage"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer z-20"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 min-w-[44px] min-h-[44px] bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer z-20"
+                aria-label="Imagen siguiente"
             >
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
@@ -82,9 +86,12 @@
                 <button 
                     v-for="(image, index) in images" 
                     :key="index"
+                    type="button"
                     @click.stop="goToImage(index)"
-                    class="w-2 h-2 rounded-full transition-all duration-200 cursor-pointer"
+                    class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200 cursor-pointer"
                     :class="currentIndex === index ? 'bg-primary scale-110' : 'bg-white/50 hover:bg-white/75 hover:scale-110'"
+                    :aria-label="`Ir a imagen ${index + 1}`"
+                    :aria-current="currentIndex === index ? 'true' : undefined"
                 ></button>
             </div>
         </div>

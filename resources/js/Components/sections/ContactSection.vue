@@ -71,7 +71,19 @@
                         </div>
 
                         <p v-if="errorMessage" class="text-red-400 text-sm">{{ errorMessage }}</p>
-                        
+                        <div
+                            v-if="successMessage"
+                            role="alert"
+                            class="flex items-center gap-3 p-4 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-sm"
+                        >
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span>{{ successMessage }}</span>
+                        </div>
+
                         <button 
                             type="submit" 
                             class="w-full btn-primary py-3"
@@ -186,6 +198,7 @@ function getSiteKey() {
 
 const loading = ref(false);
 const errorMessage = ref('');
+const successMessage = ref('');
 const form = ref({
     name: '',
     email: '',
@@ -220,6 +233,7 @@ function getRecaptchaToken() {
 
 const submitForm = async () => {
     errorMessage.value = '';
+    successMessage.value = '';
     loading.value = true;
 
     try {
@@ -240,7 +254,8 @@ const submitForm = async () => {
         });
 
         form.value = { name: '', email: '', subject: '', message: '' };
-        alert(data.message || '¡Mensaje enviado con éxito!');
+        successMessage.value = data.message || '¡Mensaje enviado con éxito!';
+        setTimeout(() => { successMessage.value = ''; }, 6000);
     } catch (err) {
         const data = err.response?.data;
         let msg = 'Error al enviar. Inténtalo de nuevo.';

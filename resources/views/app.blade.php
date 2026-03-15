@@ -25,6 +25,7 @@
 
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=2">
         <link rel="alternate icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="preload" href="{{ asset('images/profile.webp') }}" as="image">
 
         <script type="application/ld+json">
         {
@@ -36,7 +37,7 @@
                     "url": "{{ config('app.url') }}",
                     "jobTitle": "Desarrollador web full-stack",
                     "description": "Desarrollador web full-stack. Laravel, Vue.js y tecnologías modernas.",
-                    "image": "{{ config('app.url') }}/images/profile.jpg",
+                    "image": "{{ config('app.url') }}/images/profile.webp",
                     "address": { "@@type": "PostalAddress", "addressLocality": "Figueres", "addressRegion": "Girona" }
                 },
                 {
@@ -51,13 +52,14 @@
         }
         </script>
 
-        <!-- Fonts -->
+        <!-- Fonts: precarga y carga asíncrona para no bloquear el render -->
         <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="preload" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"></noscript>
 
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+        @vite(['resources/js/app.js'])
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
@@ -72,11 +74,9 @@
         @endphp
         @if($recaptchaEnabled)
         <script>window.__RECAPTCHA_SITE_KEY = @json(config('googlerecaptchav3.site_key'));</script>
-        {!! \TimeHunter\LaravelGoogleReCaptchaV3\Facades\GoogleReCaptchaV3::init() !!}
+        {{-- reCAPTCHA se carga bajo demanda desde ContactSection (scroll a contacto o al enviar) para no bloquear FCP/LCP --}}
         <style>
-        .grecaptcha-badge{
-            bottom:7% !important;
-        }
+        .grecaptcha-badge{ bottom:7% !important; }
         </style>
         @endif
     </body>

@@ -1,6 +1,6 @@
 <template>
     <section id="inicio" class="pt-16 min-h-screen flex items-center relative overflow-hidden bg-gray-850">
-        <ParticlesBackground 
+        <DelayedParticlesBackground 
             container-id="inicio"
             :config="{
                 particleCount: 120,
@@ -48,7 +48,7 @@
                             
                             <div class="absolute inset-2 rounded-full overflow-hidden border-2 border-primary/50 p-2">
                                 <div class="w-full h-full rounded-full overflow-hidden bg-gray-750 flex items-center justify-center">
-                                    <img src="images/profile.jpg" class="w-full h-full object-cover" alt="Adrià Moya Duran, desarrollador web full-stack">
+                                    <img src="/images/profile.webp" srcset="/images/profile-512.webp 512w, /images/profile.webp 800w" sizes="(max-width: 1024px) 0px, 384px" class="w-full h-full object-cover" alt="Adrià Moya Duran, desarrollador web full-stack" fetchpriority="high" width="384" height="384" decoding="async">
                                     <!-- <UserIcon class="w-48 h-48 text-primary/40" /> -->
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
 
 <script setup>
 import { CodeBracketIcon, UserIcon, EnvelopeIcon } from '@heroicons/vue/24/outline';
-import ParticlesBackground from '@/Components/ParticlesBackground.vue';
+import DelayedParticlesBackground from '@/Components/DelayedParticlesBackground.vue';
 
 defineEmits(['navigate']);
 </script>

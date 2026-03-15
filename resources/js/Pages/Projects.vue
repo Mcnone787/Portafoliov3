@@ -44,10 +44,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">E-commerce Platform</h3>
                         <p class="text-gray-400 mb-4">Plataforma completa de comercio electrónico con sistema de pagos, gestión de inventario y panel de administración.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Laravel</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Vue.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">MySQL</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Stripe</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Laravel</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">MySQL</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Stripe</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>
@@ -66,10 +66,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">Task Management App</h3>
                         <p class="text-gray-400 mb-4">Aplicación de gestión de tareas con interfaz moderna, colaboración en tiempo real y análisis de productividad.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">React</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Node.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">MongoDB</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Socket.io</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">MongoDB</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Socket.io</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>
@@ -88,10 +88,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">Blog Platform</h3>
                         <p class="text-gray-400 mb-4">Plataforma de blog con sistema de comentarios, gestión de usuarios y editor de contenido rico.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Laravel</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Alpine.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">PostgreSQL</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Redis</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Laravel</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Alpine.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">PostgreSQL</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Redis</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>
@@ -110,10 +110,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">Weather Dashboard</h3>
                         <p class="text-gray-400 mb-4">Dashboard meteorológico con datos en tiempo real, gráficos interactivos y pronósticos detallados.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Vue.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Chart.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">OpenWeather API</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">PWA</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Chart.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">OpenWeather API</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">PWA</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>
@@ -132,10 +132,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">Portfolio Website</h3>
                         <p class="text-gray-400 mb-4">Sitio web de portafolio personal con diseño moderno, animaciones suaves y optimización SEO.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Laravel</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Vue.js</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">TailwindCSS</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Inertia.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Laravel</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">TailwindCSS</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Inertia.js</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>
@@ -154,10 +154,10 @@
                         <h3 class="text-xl font-semibold text-white mb-2">API REST Service</h3>
                         <p class="text-gray-400 mb-4">Servicio API RESTful con autenticación JWT, documentación automática y testing completo.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Laravel</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">JWT</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Swagger</span>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">PHPUnit</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Laravel</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">JWT</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">Swagger</span>
+                            <span class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">PHPUnit</span>
                         </div>
                         <div class="flex gap-2">
                             <button class="btn-primary text-sm">Ver Demo</button>

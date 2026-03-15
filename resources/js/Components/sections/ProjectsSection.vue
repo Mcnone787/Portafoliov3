@@ -1,6 +1,6 @@
 <template>
     <section id="proyectos" class="py-20 bg-gray-850 relative overflow-hidden">
-        <ParticlesBackground 
+        <DelayedParticlesBackground 
             container-id="proyectos"
             :config="{
                 particleCount: 120,
@@ -49,7 +49,7 @@
                             <div class="flex flex-wrap gap-2 mb-3">
                                 <span v-for="tech in project.technologies.slice(0, 3)" 
                                       :key="tech"
-                                      class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+                                      class="bg-primary/40 text-cyan-100 px-2 py-1 rounded text-sm">
                                     {{ tech }}
                                 </span>
                                 <span v-if="project.technologies.length > 3" 
@@ -167,12 +167,12 @@
 </template>
 
 <script setup>
+import { defineAsyncComponent, ref } from 'vue';
 import { useProjects } from '@/composables/useProjects';
-import ParticlesBackground from '@/Components/ParticlesBackground.vue';
 import ProjectCarousel from '@/Components/ProjectCarousel.vue';
-import ProjectDetailsModal from '@/Components/ProjectDetailsModal.vue';
 
-import { ref } from 'vue';
+import DelayedParticlesBackground from '@/Components/DelayedParticlesBackground.vue';
+const ProjectDetailsModal = defineAsyncComponent(() => import('@/Components/ProjectDetailsModal.vue'));
 
 const hoveredProject = ref(null);
 const selectedProject = ref(null);

@@ -1,0 +1,560 @@
+PageSpeed Insights logo
+PageSpeed Insights
+Este sitio usa cookies de Google para ofrecer sus servicios y analizar el tráfico.
+Informe del 15 mar 2026, 16:35:10
+https://adriamd.com/
+Introduce una URL válida
+
+
+smartphone
+Móvil
+
+computer
+Ordenador
+
+Descubre lo que experimentan tus usuarios reales
+No hay datos
+
+Diagnostica problemas de rendimiento
+56
+Rendimiento
+93
+Accesibilidad
+100
+Prácticas recomendadas
+92
+SEO
+56
+FCP
++0
+LCP
++0
+TBT
++29
+CLS
++25
+SI
++3
+Rendimiento
+Los valores son estimaciones y pueden variar. La puntuación del rendimiento se calcula directamente a partir de estas métricas.Ver calculadora.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Métricas
+Ampliar vista
+First Contentful Paint
+7,7 s
+Renderizado del mayor elemento con contenido
+9,7 s
+Total Blocking Time
+130 ms
+Cambios de diseño acumulados
+0.006
+Speed Index
+7,7 s
+Captured at 15 mar 2026, 16:35 CET
+Moto G Power emulado with Lighthouse 13.0.1
+Sesión de una sola página
+Carga inicial de la página
+Limitación de 4G lenta
+Using HeadlessChromium 145.0.7632.116 with lr
+Ver gráfico de rectángulos
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Mostrar auditorías relacionadas con:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Estadísticas
+Usar tiempos de vida de caché eficientes Ahorro estimado de 919 KiB
+Una duración en caché más larga puede aumentar el número de visitas repetidas a tu página. Más informaciónLCPFCPSin puntuar
+Solicitud
+Tiempo de vida en caché
+Tamaño de la transferencia
+adriamd.com Propio
+919 KiB
+…trueta/imagen1.png(adriamd.com)
+None
+168 KiB
+…trueta/imagen2.jpeg(adriamd.com)
+None
+161 KiB
+/images/profile.jpg(adriamd.com)
+None
+130 KiB
+…assets/app-mEBeNYri.js(adriamd.com)
+None
+84 KiB
+…despresdelacovid/imagen2.png(adriamd.com)
+None
+61 KiB
+…onlybbq/imagen2.jpg(adriamd.com)
+None
+46 KiB
+…onlybbq/imagen1.jpg(adriamd.com)
+None
+46 KiB
+…despresdelacovid/imagen1.webp(adriamd.com)
+None
+46 KiB
+…assets/Home-CM7ILfEn.js(adriamd.com)
+None
+41 KiB
+…onlybbq/imagen3.jpg(adriamd.com)
+None
+37 KiB
+…onlybbq/imagen6.jpg(adriamd.com)
+None
+36 KiB
+…onlybbq/imagen5.jpg(adriamd.com)
+None
+28 KiB
+…onlybbq/imagen4.jpg(adriamd.com)
+None
+23 KiB
+…assets/app-0iy_JSNi.css(adriamd.com)
+None
+10 KiB
+…assets/Home-DOUaYJHu.css(adriamd.com)
+None
+1 KiB
+…assets/Home-DOUaYJHu.css(adriamd.com)
+None
+1 KiB
+Google CDN cdn 
+3 KiB
+…api2/logo_48.png(www.gstatic.com)
+7d
+3 KiB
+Redistribución forzada
+Se produce un reflow forzado cuando JavaScript consulta propiedades geométricas (como offsetWidth) después de que los estilos hayan sido invalidados por un cambio en el estado del DOM. Esto puede provocar un rendimiento deficiente. Consulta más información sobre los reflows forzados y las posibles mitigaciones.Sin puntuar
+Llamada a función principal
+Tiempo total de redistribución
+…QvLuXwupq…/recaptcha__es.js:239:156(www.gstatic.com)
+1 ms
+Fuente
+Tiempo total de redistribución
+…QvLuXwupq…/recaptcha__es.js:635:99(www.gstatic.com)
+0 ms
+…QvLuXwupq…/recaptcha__es.js:591:462(www.gstatic.com)
+1 ms
+…assets/Home-CM7ILfEn.js:1:6877(adriamd.com)
+45 ms
+…assets/Home-CM7ILfEn.js:1:6377(adriamd.com)
+2 ms
+[sin asignación]
+0 ms
+Mejorar la entrega de imágenes Ahorro estimado de 267 KiB
+Si se reduce el tiempo de descarga de las imágenes, se puede mejorar el tiempo de carga percibido de la página y el LCP. Más información sobre la optimización del tamaño de las imágenesLCPFCPSin puntuar
+URL
+Tamaño del recurso
+Ahorro estimado
+adriamd.com Propio
+387,0 KiB	266,7 KiB
+APP Trueta OPA - Imagen 1
+<img src="/images/projects/trueta/imagen1.png" alt="APP Trueta OPA - Imagen 1" class="absolute inset-0 w-full h-full object-cover">
+…trueta/imagen1.png(adriamd.com)
+167,0 KiB
+118,8 KiB
+Usar un formato de imagen moderno (WebP, AVIF) o aumentar la compresión de la imagen podría mejorar el tamaño de descarga de esta imagen.
+70,8 KiB
+Este archivo de imagen es más grande de lo necesario (1024x577) para las dimensiones mostradas (578x513). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+83,3 KiB
+Adrià Moya Duran, desarrollador full-stack en Girona
+<img src="images/profile.jpg" class="w-full h-full object-cover" alt="Adrià Moya Duran, desarrollador full-stack en Girona" loading="lazy" width="256" height="256">
+/images/profile.jpg(adriamd.com)
+129,3 KiB
+105,2 KiB
+Usar un formato de imagen moderno (WebP, AVIF) o aumentar la compresión de la imagen podría mejorar el tamaño de descarga de esta imagen.
+25,2 KiB
+Este archivo de imagen es más grande de lo necesario (800x800) para las dimensiones mostradas (385x385). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+99,4 KiB
+Després de la COVID - Imagen 1
+<img src="/images/projects/despresdelacovid/imagen1.webp" alt="Després de la COVID - Imagen 1" class="absolute inset-0 w-full h-full object-cover">
+…despresdelacovid/imagen1.webp(adriamd.com)
+45,2 KiB
+34,7 KiB
+Este archivo de imagen es más grande de lo necesario (1200x675) para las dimensiones mostradas (578x325). Usa imágenes adaptables para reducir el tamaño de descarga de la imagen.
+34,7 KiB
+Only BBQ - Imagen 1
+<img src="/images/projects/onlybbq/imagen1.jpg" alt="Only BBQ - Imagen 1" class="absolute inset-0 w-full h-full object-cover">
+…onlybbq/imagen1.jpg(adriamd.com)
+45,6 KiB
+8,0 KiB
+Usar un formato de imagen moderno (WebP, AVIF) o aumentar la compresión de la imagen podría mejorar el tamaño de descarga de esta imagen.
+8,0 KiB
+Causantes de los cambios de diseño
+Desglose de LCP
+Terceros
+Estas estadísticas también están disponibles en el panel Rendimiento de Chrome DevTools. Graba una traza para ver información más detallada.
+Diagnósticos
+Reduce el contenido JavaScript que no se use Ahorro estimado de 406 KiB
+Reduce el contenido JavaScript que no se use y retrasa la carga de secuencias de comandos hasta que se necesiten. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de JavaScript que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+Google CDN cdn 
+719,5 KiB	356,6 KiB
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+359,7 KiB
+182,4 KiB
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+359,7 KiB
+174,2 KiB
+adriamd.com Propio
+83,8 KiB	49,0 KiB
+…assets/app-mEBeNYri.js(adriamd.com)
+83,8 KiB
+49,0 KiB
+Reduce el tiempo de ejecución de JavaScript 1,9 s
+Te recomendamos que reduzcas el tiempo de análisis, compilación y ejecución de JavaScript. Para ello, puedes utilizar cargas útiles de JavaScript más pequeñas. Consulta cómo reducir el tiempo de ejecución de JavaScriptTBTSin puntuar
+URL
+Tiempo de CPU total
+Evaluación de la secuencia de comandos
+Análisis de la secuencia de comandos
+adriamd.com Propio
+5306 ms	828 ms	29 ms
+…assets/Home-CM7ILfEn.js(adriamd.com)
+5096 ms
+688 ms
+4 ms
+…assets/app-mEBeNYri.js(adriamd.com)
+150 ms
+115 ms
+21 ms
+https://adriamd.com
+60 ms
+25 ms
+4 ms
+Google CDN cdn 
+945 ms	665 ms	220 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+945 ms
+665 ms
+220 ms
+No atribuible
+195 ms	22 ms	0 ms
+Unattributable
+195 ms
+22 ms
+0 ms
+Other Google APIs/SDKs utility 
+100 ms	90 ms	4 ms
+…api2/anchor?ar=…(www.google.com)
+100 ms
+90 ms
+4 ms
+Minimiza el trabajo del hilo principal 6,6 s
+Te recomendamos que reduzcas el tiempo de análisis, compilación y ejecución de JavaScript. Para ello, puedes utilizar cargas útiles de JavaScript más pequeñas. Consulta cómo minimizar el trabajo del hilo principalTBTSin puntuar
+Categoría
+Duración
+Other
+4281 ms
+Script Evaluation
+1669 ms
+Script Parsing & Compilation
+254 ms
+Style & Layout
+228 ms
+Rendering
+131 ms
+Garbage Collection
+41 ms
+Parse HTML & CSS
+18 ms
+Reduce el contenido CSS que no se use Ahorro estimado de 40 KiB
+Reduce las reglas que no se usen de las hojas de estilo y retrasa las reglas CSS que no se utilicen para el contenido de la parte visible a primera vista. Así, se reducirán los bytes consumidos por la actividad de red. Consulta cómo reducir el contenido de CSS que no se useLCPFCPSin puntuar
+URL
+Tamaño de la transferencia
+Ahorro estimado
+Google CDN cdn 
+41,5 KiB	39,7 KiB
+…QvLuXwupq…/styles__ltr.css(www.gstatic.com)
+41,5 KiB
+39,7 KiB
+Evita tareas largas del hilo principal 6 tareas largas encontradas
+Enumera las tareas más largas del hilo principal, lo que es útil para identificar las que más contribuyen a la latencia. Consulta cómo evitar tareas largas del hilo principalTBTSin puntuar
+URL
+Hora de inicio
+Duración
+Google CDN cdn 
+577 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+11.422 ms
+151 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+11.748 ms
+138 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+779 ms
+112 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+11.886 ms
+89 ms
+…QvLuXwupq…/recaptcha__es.js(www.gstatic.com)
+11.573 ms
+87 ms
+adriamd.com Propio
+86 ms
+…assets/app-mEBeNYri.js(adriamd.com)
+2878 ms
+86 ms
+Consulta más información sobre el rendimiento de tu aplicación. Estos datos no afectan directamente a la puntuación del rendimiento.
+Auditorías aprobadas (16)
+Mostrar
+93
+Accesibilidad
+Estas comprobaciones permiten identificar oportunidades para mejorar la accesibilidad de tu aplicación web. La detección automática solo puede detectar un subconjunto de problemas y no garantiza la accesibilidad de tu aplicación web, por lo que también te recomendamos que hagas pruebas manuales.
+Contraste
+Los colores de fondo y de primer plano no tienen una relación de contraste adecuada.
+Los textos con poco contraste resultan difíciles o imposibles de leer para muchos usuarios. Consulta cómo crear suficiente contraste de color
+Elementos con errores
+Ver Proyectos
+<button type="button" class="btn-primary" aria-label="Ir a la sección de proyectos">
+Laravel
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+Vue.js
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+MySQL
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+Ver en prensa
+<span>
+📰 Ver en prensa
+<a href="https://www.emporda.info/comarca/2024/08/12/alumnes-cendrassos-figueres-pr…" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 hover:bg-primar…">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+🔒 Aplicación de uso interno hospitalario
+<p class="text-primary text-sm">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
++4 más
+<span class="text-primary">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+Ver más
+<button type="button" class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3 min-h-…" aria-label="Ver más sobre APP Trueta OPA">
+APP Trueta OPA 1 de 2 imágenes APP Trueta OPA Laravel Vue.js MySQL +2 Aplica…
+<div data-index="0" class="card group relative flex flex-col">
+jQuery
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
+HTML5
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
+CSS3
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
+Ver en prensa
+<span>
+📰 Ver en prensa
+<a href="https://www.emporda.info/salut/2021/09/23/fse-i-l-institut-cendrassos-5759…" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 hover:bg-primar…">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
++2 más
+<span class="text-primary">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
+Ver más
+<button type="button" class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3 min-h-…" aria-label="Ver más sobre Després de la COVID">
+Després de la COVID 1 de 2 imágenes Després de la COVID jQuery HTML5 CSS3 +2 …
+<div data-index="1" class="card group relative flex flex-col">
+Ver Demo
+<a href="http://www.despresdelacovid.cat" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm flex-1 flex items-center justify-center gap-1">
+Laravel
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
+Livewire
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
+Alpine.js
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
++4 más
+<span class="text-primary">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
+Ver más
+<button type="button" class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3 min-h-…" aria-label="Ver más sobre Only BBQ">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
+Ver Código
+<a href="https://github.com/ABP-2n-DAW-23-24/G2-barbaquiu" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm flex-1 flex items-center justify-center gap-1">
+Only BBQ 1 de 6 imágenes Only BBQ Laravel Livewire Alpine.js +8 Red social c…
+<div data-index="2" class="card group relative flex flex-col">
+Desarrollo Web
+<span class="text-sm sm:text-base">
+Desarrollo Web
+<button class="px-3 sm:px-4 py-2 rounded-lg flex items-center gap-2 transition-all durati…">
+Ver más tecnologías
+<span>
+Frontend HTML5 CSS3 JavaScript TypeScript TailwindCSS SASS/SCSS Ver más tecnolo…
+<div class="card h-fit">
+Ver más tecnologías
+<span>
+Backend PHP Node.js Python Laravel Laravel Sanctum Laravel Reverb Ver más tecno…
+<div class="card h-fit">
+Descargar CV
+<button type="button" class="btn-primary" aria-label="Descargar currículum en PDF">
+Enviar Mensaje
+<span>
+Enviar Mensaje
+<button type="submit" class="w-full btn-primary py-3">
+Se aplican la
+<span>
+Envíame un mensaje Nombre Email Asunto Mensaje Enviar Mensaje Protegido por re…
+<div class="card">
+Política de privacidad
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+Envíame un mensaje Nombre Email Asunto Mensaje Enviar Mensaje Protegido por re…
+<div class="card">
+y los
+<span>
+Envíame un mensaje Nombre Email Asunto Mensaje Enviar Mensaje Protegido por re…
+<div class="card">
+Términos de servicio
+<a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+Envíame un mensaje Nombre Email Asunto Mensaje Enviar Mensaje Protegido por re…
+<div class="card">
+de Google.
+<span>
+Envíame un mensaje Nombre Email Asunto Mensaje Enviar Mensaje Protegido por re…
+<div class="card">
+A continuación se indican consejos para facilitar la lectura del contenido.
+Prácticas recomendadas
+Las áreas táctiles no tienen un tamaño o un espaciado suficientes.
+Las áreas táctiles con un tamaño y un espaciado suficientes ayudan a los usuarios con posibles dificultades para usar controles pequeños a activarlos. Más información sobre las áreas táctiles
+Elementos con errores
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 1
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 1" aria-current="true">
+Ir a imagen 3
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 3">
+Ir a imagen 3
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 3">
+Ir a imagen 2
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 2">
+Ir a imagen 4
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 4">
+Ir a imagen 4
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 4">
+Ir a imagen 3
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 3">
+Ir a imagen 5
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 5">
+Ir a imagen 5
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 5">
+Ir a imagen 4
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 4">
+Ir a imagen 6
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 6">
+Ir a imagen 6
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 6">
+Ir a imagen 5
+<button type="button" class="w-3 h-3 min-w-[12px] min-h-[12px] rounded-full transition-all duration-200…" aria-label="Ir a imagen 5">
+Los enlaces idénticos tienen la misma finalidad.
+Estos elementos destacan las prácticas recomendadas de accesibilidad más habituales.
+Elementos adicionales que se deben comprobar manualmente (10)
+Mostrar
+Estos elementos se ocupan de áreas que las herramientas de prueba automáticas no pueden analizar. Consulta más información sobre cómo revisar la accesibilidad en nuestra guía.
+Auditorías aprobadas (23)
+Mostrar
+No aplicable (34)
+Mostrar
+100
+Prácticas recomendadas
+Confianza y seguridad
+Asegura que la CSP sea efectiva frente a ataques XSS
+Usa una política de HSTS sólida
+Asegúrate de que el aislamiento de orígenes sea adecuado con COOP
+Mitiga el secuestro de clics con XFO o CSP
+Mitigar el XSS basado en DOM con Trusted Types
+Auditorías aprobadas (13)
+Mostrar
+No aplicable (2)
+Mostrar
+92
+SEO
+Estas comprobaciones aseguran que tu página siga las recomendaciones básicas sobre optimización en buscadores. Hay muchos otros factores adicionales que Lighthouse no valora aquí y que pueden afectar a tu posicionamiento en las búsquedas, como el rendimiento en las Métricas web principales. Consulta más información sobre las Directrices básicas de la Búsqueda de Google.
+Rastrear e indexar
+robots.txt no es válido 1 error encontrado
+Si el formato del archivo robots.txt no es correcto, es posible que los rastreadores no puedan interpretar cómo quieres que se rastree o indexe tu sitio web. Más información sobre robots.txt
+Line #
+Content
+Error
+29
+Content-Signal: search=yes,ai-train=no
+Unknown directive
+Para aparecer en los resultados de búsqueda, los rastreadores necesitan acceder a tu aplicación.
+Elementos adicionales que se deben comprobar manualmente (1)
+Mostrar
+Ejecuta estos validadores adicionales en tu sitio web para comprobar más prácticas recomendadas de SEO.
+Auditorías aprobadas (9)
+Mostrar
+Más información en PageSpeed Insights
+Novedades
+Documentación
+Más información sobre el rendimiento web
+Haz preguntas en Stack Overflow
+Lista de distribución
+Contenido relacionado
+Actualizaciones
+Aspectos básicos de la Web
+Casos de éxito
+Pódcasts
+Contacto
+Twitter
+YouTube
+Google Developers Logo
+Chrome
+Firebase
+Todos los productos
+Política de Términos y Privacidad
+Para obtener más información, consulta las Políticas del Sitio Google Developers.

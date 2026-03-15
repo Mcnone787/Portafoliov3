@@ -1,6 +1,6 @@
 <template>
     <section id="contacto" class="py-20 bg-gray-850 relative overflow-hidden">
-        <ParticlesBackground 
+        <DelayedParticlesBackground 
             container-id="contacto"
             :config="{
                 particleCount: 120,
@@ -188,12 +188,35 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import ParticlesBackground from '@/Components/ParticlesBackground.vue';
+import { ref, onMounted } from 'vue';
+import DelayedParticlesBackground from '@/Components/DelayedParticlesBackground.vue';
 
 function getSiteKey() {
     if (typeof window === 'undefined') return '';
     return window.__RECAPTCHA_SITE_KEY || import.meta.env.VITE_RECAPTCHA_SITE_KEY || '';
+}
+
+let recaptchaLoadPromise = null;
+function loadRecaptchaScript() {
+    if (window.grecaptcha) return Promise.resolve();
+    if (recaptchaLoadPromise) return recaptchaLoadPromise;
+    const siteKey = getSiteKey();
+    if (!siteKey) return Promise.reject(new Error('reCAPTCHA no está configurado.'));
+    recaptchaLoadPromise = new Promise((resolve, reject) => {
+        if (document.getElementById('gReCaptchaScript')) {
+            if (window.grecaptcha) window.grecaptcha.ready(resolve);
+            else window.addEventListener('load', () => { if (window.grecaptcha) window.grecaptcha.ready(resolve); else resolve(); });
+            return;
+        }
+        const script = document.createElement('script');
+        script.id = 'gReCaptchaScript';
+        script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}&hl=es`;
+        script.async = true;
+        script.onload = () => { if (window.grecaptcha) window.grecaptcha.ready(resolve); else resolve(); };
+        script.onerror = () => reject(new Error('No se pudo cargar reCAPTCHA.'));
+        document.head.appendChild(script);
+    });
+    return recaptchaLoadPromise;
 }
 
 const loading = ref(false);
@@ -206,13 +229,19 @@ const form = ref({
     message: ''
 });
 
+onMounted(() => {
+    const section = document.getElementById('contacto');
+    if (!section || !getSiteKey()) return;
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) loadRecaptchaScript();
+    }, { rootMargin: '100px', threshold: 0.1 });
+    observer.observe(section);
+});
+
 function getRecaptchaToken() {
-    return new Promise((resolve, reject) => {
-        const siteKey = getSiteKey();
-        if (!siteKey) {
-            reject(new Error('reCAPTCHA no está configurado. Recarga la página.'));
-            return;
-        }
+    const siteKey = getSiteKey();
+    if (!siteKey) return Promise.reject(new Error('reCAPTCHA no está configurado. Recarga la página.'));
+    return loadRecaptchaScript().then(() => new Promise((resolve, reject) => {
         if (!window.grecaptcha) {
             reject(new Error('reCAPTCHA aún no ha cargado. Espera un momento y vuelve a intentarlo.'));
             return;
@@ -222,13 +251,11 @@ function getRecaptchaToken() {
                 .then((token) => {
                     if (!token || typeof token !== 'string' || token.length < 10) {
                         reject(new Error('No se pudo obtener la verificación. Recarga la página e inténtalo de nuevo.'));
-                    } else {
-                        resolve(token);
-                    }
+                    } else resolve(token);
                 })
                 .catch(reject);
         });
-    });
+    }));
 }
 
 const submitForm = async () => {

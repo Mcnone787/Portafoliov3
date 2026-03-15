@@ -1,6 +1,11 @@
 <IfModule mod_headers.c>
+    # 1 año para JS, CSS, fuentes e iconos (inmutables con hash)
     <FilesMatch "\.(js|css|woff2?|ttf|eot|ico|svg|webp)(\?.*)?$">
         Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    # 1 semana para imágenes (pueden cambiar)
+    <FilesMatch "\.(jpg|jpeg|png|gif|avif)(\?.*)?$">
+        Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
     </FilesMatch>
 </IfModule>
 

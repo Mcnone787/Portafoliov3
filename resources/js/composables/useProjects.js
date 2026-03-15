@@ -9,8 +9,8 @@ export function useProjects() {
             shortInfo: 'Implementado en el Hospital Trueta con planes de extensión a otros hospitales de Cataluña',
             technologies: ['Laravel', 'Vue.js', 'MySQL', 'TailwindCSS', 'PHP'],
             images: [
-                '/images/projects/trueta/imagen1.png',
-                '/images/projects/trueta/imagen2.jpeg',
+                '/images/projects/trueta/imagen1.webp',
+                '/images/projects/trueta/imagen2.webp',
             ],
             highlights: [
                 '🏆 Primer premio CFGS Universidad de Girona',
@@ -48,7 +48,7 @@ export function useProjects() {
             ],
             images: [
                 '/images/projects/despresdelacovid/imagen1.webp',
-                '/images/projects/despresdelacovid/imagen2.png'
+                '/images/projects/despresdelacovid/imagen2.webp'
             ],
             pressLinks: [
                 {
@@ -66,14 +66,12 @@ export function useProjects() {
             shortInfo: 'Proyecto final de DAW - Institut Cendrassos',
             technologies: ['Laravel', 'Livewire', 'Alpine.js', 'MySQL', 'TailwindCSS', 'PHP', 'Node.js', 'Oracle Cloud','WebSockets','OAUTH2','Laravel Reverb'],
             images: [
-                '/images/projects/onlybbq/imagen1.jpg',
-                '/images/projects/onlybbq/imagen2.jpg',
-                '/images/projects/onlybbq/imagen3.jpg',
-                '/images/projects/onlybbq/imagen4.jpg',
-                '/images/projects/onlybbq/imagen5.jpg',
-                '/images/projects/onlybbq/imagen6.jpg',
-     
-
+                '/images/projects/onlybbq/imagen1.webp',
+                '/images/projects/onlybbq/imagen2.webp',
+                '/images/projects/onlybbq/imagen3.webp',
+                '/images/projects/onlybbq/imagen4.webp',
+                '/images/projects/onlybbq/imagen5.webp',
+                '/images/projects/onlybbq/imagen6.webp',
             ],
             highlights: [
                 '🔄 Chat en tiempo real con Laravel Reverb',
@@ -92,12 +90,11 @@ export function useProjects() {
             shortInfo: 'App móvil de gestión de tareas con React Native',
             technologies: ['React Native', 'JavaScript', 'Android', 'Expo', 'AsyncStorage', 'React Navigation'],
             images: [
-                '/images/projects/taskmanager/imagen1.png',
-                '/images/projects/taskmanager/imagen2.png',
-                '/images/projects/taskmanager/imagen3.png',
-                '/images/projects/taskmanager/imagen4.png',
-                '/images/projects/taskmanager/imagen5.png'
-
+                '/images/projects/taskmanager/imagen1.webp',
+                '/images/projects/taskmanager/imagen2.webp',
+                '/images/projects/taskmanager/imagen3.webp',
+                '/images/projects/taskmanager/imagen4.webp',
+                '/images/projects/taskmanager/imagen5.webp',
             ],
             highlights: [
                 '✨ Interfaz moderna y minimalista',

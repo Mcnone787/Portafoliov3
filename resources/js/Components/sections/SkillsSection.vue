@@ -1,7 +1,7 @@
 <template>
     <section id="habilidades" class="py-20 bg-gray-850 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <ParticlesBackground 
+            <DelayedParticlesBackground 
                 container-id="habilidades"
                 :config="{
                     particleCount: 120,
@@ -196,10 +196,11 @@
 </template>
 
 <script setup>
-import { useSkills } from '@/composables/useSkills';
 import { computed } from 'vue';
-import ParticlesBackground from '@/Components/ParticlesBackground.vue';
+import { useSkills } from '@/composables/useSkills';
 import TechIcon from '@/Components/TechIcon.vue';
+
+import DelayedParticlesBackground from '@/Components/DelayedParticlesBackground.vue';
 
 const { selectedCategory, categories, showAll, getDisplayedTechs, hasMoreTechs, setSelectedCategory } = useSkills();
 

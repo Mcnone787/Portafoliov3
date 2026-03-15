@@ -1,6 +1,5 @@
 <template>
     <section id="proyectos" class="py-20 bg-gray-850 relative overflow-hidden">
-        <!-- Particles Container -->
         <ParticlesBackground 
             container-id="proyectos"
             :config="{
@@ -34,7 +33,6 @@
                         @mouseenter="hoveredProject = project.title"
                         @mouseleave="hoveredProject = null"
                     >
-                        <!-- Carrusel de imágenes -->
                         <div class="mb-4">
                             <ProjectCarousel 
                                 :images="project.images || []"
@@ -45,11 +43,9 @@
                             />
                         </div>
                         
-                        <!-- Contenido -->
                         <div class="flex-grow">
                             <h3 class="text-xl font-semibold text-white mb-2">{{ project.title }}</h3>
                             
-                            <!-- Tecnologías (mostrar solo las 3 primeras) -->
                             <div class="flex flex-wrap gap-2 mb-3">
                                 <span v-for="tech in project.technologies.slice(0, 3)" 
                                       :key="tech"
@@ -64,7 +60,6 @@
 
                                                                     <p class="text-gray-400 mb-3">{{ project.description }}</p>
 
-                                        <!-- Botón de prensa -->
                                         <div v-if="project.pressLinks && project.pressLinks.length > 0" class="flex flex-wrap gap-2 mb-3">
                                             <a :href="project.pressLinks[0].url"
                                                target="_blank"
@@ -79,14 +74,12 @@
                                             </a>
                                         </div>
 
-                                        <!-- Nota de privacidad si existe -->
                                         <div v-if="project.isPrivate" class="mb-3">
                                             <p class="text-primary text-sm">
                                                 {{ project.privateNote }}
                                             </p>
                                         </div>
 
-                                        <!-- Primer highlight como preview -->
                                         <div v-if="project.highlights && project.highlights.length > 0" class="mb-3">
                                             <p class="text-gray-400 text-sm">
                                                 {{ project.highlights[0] }}
@@ -97,9 +90,7 @@
                             </div>
                         </div>
                         
-                        <!-- Botones de acción -->
                         <div class="flex flex-col sm:flex-row gap-2 mt-4">
-                            <!-- Botón Ver más siempre a la izquierda -->
                             <button 
                                 @click="selectedProject = project"
                                 class="btn-outline text-sm flex items-center justify-center gap-1 sm:w-1/3"
@@ -110,7 +101,6 @@
                                 </svg>
                             </button>
 
-                            <!-- Contenedor para botones de acción a la derecha -->
                             <div class="flex gap-2 sm:w-2/3">
                                 <a 
                                     v-if="project.demoUrl"
@@ -165,7 +155,6 @@
         </div>
     </section>
 
-    <!-- Modal de detalles del proyecto -->
     <ProjectDetailsModal
         :show="!!selectedProject"
         :project="selectedProject"

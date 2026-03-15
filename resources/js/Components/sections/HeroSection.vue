@@ -1,6 +1,5 @@
 <template>
     <section id="inicio" class="pt-16 min-h-screen flex items-center relative overflow-hidden bg-gray-850">
-        <!-- Particles Container -->
         <ParticlesBackground 
             container-id="inicio"
             :config="{
@@ -16,7 +15,6 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
                 <div class="text-center lg:text-left">
                     <h1 class="text-4xl sm:text-6xl font-bold text-white mb-6">
                         ¡Hola! Soy <span class="text-primary">Adria Moya Duran</span>
@@ -41,17 +39,13 @@
                     </div>
                 </div>
 
-                <!-- Profile Image -->
                 <div class="hidden lg:flex justify-center items-center">
                     <div class="relative">
-                        <!-- Imagen principal -->
                         <div class="w-96 h-96 rounded-full relative">
-                            <!-- Bordes animados -->
                             <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave"></div>
                             <div class="absolute inset-0 rounded-full border-2 border-primary/30 animate-border-wave" style="animation-delay: -1s;"></div>
                             <div class="absolute inset-0 rounded-full border-2 border-primary/40 animate-border-wave" style="animation-delay: -2s;"></div>
                             
-                            <!-- Contenedor de la imagen -->
                             <div class="absolute inset-2 rounded-full overflow-hidden border-2 border-primary/50 p-2">
                                 <div class="w-full h-full rounded-full overflow-hidden bg-gray-750 flex items-center justify-center">
                                     <img src="images/profile.jpg"     class="w-full h-full object-cover" 
@@ -61,7 +55,6 @@
                             </div>
                         </div>
                         
-                        <!-- Círculo decorativo -->
                         <div class="absolute -inset-4 border-2 border-primary/20 rounded-full animate-spin-slow"></div>
                     </div>
                 </div>

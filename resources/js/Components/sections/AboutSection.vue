@@ -1,6 +1,5 @@
 <template>
     <section id="sobre-mi" class="py-20 bg-gray-850 relative overflow-hidden">
-        <!-- Particles Container -->
         <ParticlesBackground 
             container-id="sobre-mi"
             :config="{
@@ -18,17 +17,14 @@
             <h2 class="text-3xl font-bold text-center mb-12">Sobre Mí</h2>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Profile Image -->
                 <div class="text-center lg:text-left">
                     <div class="w-64 h-64 mx-auto lg:mx-0 rounded-full relative mb-8">
-                        <!-- Bordes animados -->
                         <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave"></div>
                         <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave" style="animation-delay: -0.6s;"></div>
                         <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave" style="animation-delay: -1.2s;"></div>
                         <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave" style="animation-delay: -1.8s;"></div>
                         <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-border-wave" style="animation-delay: -2.4s;"></div>
                         
-                        <!-- Contenedor de la imagen -->
                         <div class="absolute inset-2 rounded-full overflow-hidden border-2 border-primary/50 p-2">
                             <div class="w-full h-full rounded-full overflow-hidden bg-gray-750 flex items-center justify-center">
                                 <img src="images/profile.jpg"     class="w-full h-full object-cover" 
@@ -47,7 +43,6 @@
                     </div>
                 </div>
 
-                <!-- About Text -->
                 <div class="space-y-6">
                     <div class="card">
                         <h3 class="text-xl font-semibold text-white mb-3">Mi Historia</h3>

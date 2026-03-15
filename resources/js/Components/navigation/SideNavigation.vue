@@ -1,9 +1,7 @@
 <template>
     <nav class="fixed left-4 lg:left-8 xl:left-12 top-1/2 transform -translate-y-1/2 z-50 hidden 2xl:block">
         <div class="flex flex-col relative">
-            <!-- Navigation Items Container -->
             <div class="relative">
-                <!-- Background Line (static) -->
                 <div 
                     class="absolute left-[7px] w-0.5 bg-white/30"
                     :style="{
@@ -12,7 +10,6 @@
                     }"
                 ></div>
                 
-                <!-- Progress Line (dynamic) -->
                 <div 
                     ref="progressLine"
                     class="absolute left-[7px] top-[7px] w-0.5 bg-primary origin-top transition-transform duration-300 ease-out"
@@ -22,7 +19,6 @@
                     }"
                 ></div>
 
-                <!-- Navigation Items -->
                 <div class="space-y-8">
                     <div 
                         v-for="(item, index) in navigation" 
@@ -30,7 +26,6 @@
                         @click="$emit('navigate', item.id)"
                         class="group flex items-center cursor-pointer"
                     >
-                        <!-- Dot Container -->
                         <div class="relative">
                             <div 
                                 class="nav-dot w-4 h-4 rounded-full border-2 transition-all duration-300 ease-out"
@@ -38,7 +33,6 @@
                             ></div>
                         </div>
                         
-                        <!-- Section Icon and Name -->
                         <div class="flex items-center mt-1">
                        
                             <span 

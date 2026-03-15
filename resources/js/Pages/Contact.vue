@@ -2,7 +2,6 @@
     <Head title="Contacto - Portfolio" />
     
     <div class="min-h-screen bg-gray-900">
-        <!-- Navigation -->
         <nav class="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm border-b border-primary/20 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
@@ -20,7 +19,6 @@
             </div>
         </nav>
 
-        <!-- Header -->
         <section class="pt-16 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -32,11 +30,9 @@
             </div>
         </section>
 
-        <!-- Contact Content -->
         <section class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
                     <div class="card">
                         <h2 class="text-2xl font-bold text-white mb-6">Envíame un mensaje</h2>
                         
@@ -101,7 +97,6 @@
                         </form>
                     </div>
 
-                    <!-- Contact Information -->
                     <div class="space-y-8">
                         <div class="card">
                             <h2 class="text-2xl font-bold text-white mb-6">Información de Contacto</h2>
@@ -146,7 +141,6 @@
                             </div>
                         </div>
 
-                        <!-- Social Links -->
                         <div class="card">
                             <h2 class="text-2xl font-bold text-white mb-6">Sígueme</h2>
                             
@@ -177,7 +171,6 @@
                             </div>
                         </div>
 
-                        <!-- Availability -->
                         <div class="card">
                             <h2 class="text-2xl font-bold text-white mb-6">Disponibilidad</h2>
                             <div class="space-y-4">
@@ -216,14 +209,8 @@ const form = ref({
 
 const submitForm = async () => {
     loading.value = true;
-    
-    // Simular envío del formulario
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Aquí iría la lógica real de envío del formulario
     console.log('Formulario enviado:', form.value);
-    
-    // Resetear formulario
     form.value = {
         name: '',
         email: '',
@@ -232,8 +219,6 @@ const submitForm = async () => {
     };
     
     loading.value = false;
-    
-    // Mostrar mensaje de éxito (aquí podrías usar una notificación)
     alert('¡Mensaje enviado con éxito!');
 };
 </script>

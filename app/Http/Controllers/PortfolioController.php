@@ -21,8 +21,6 @@ class PortfolioController extends Controller
             'message' => 'required|string|max:1000',
         ]);
 
-        // Aquí puedes agregar la lógica para enviar el email
-        // Por ejemplo, usando Laravel Mail
         
         return response()->json([
             'message' => 'Mensaje enviado con éxito'

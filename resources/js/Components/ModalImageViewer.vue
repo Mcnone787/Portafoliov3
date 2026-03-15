@@ -1,8 +1,6 @@
 <template>
     <div class="relative flex items-center justify-center h-[240px] sm:h-[320px] md:h-[400px] group">
-        <!-- Carrusel de imágenes -->
         <div class="w-full h-full overflow-hidden">
-            <!-- Imágenes -->
             <div 
                 class="flex h-full transition-transform duration-500 ease-in-out"
                 :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
@@ -12,9 +10,7 @@
                     :key="index"
                     class="w-full flex-shrink-0 flex items-center justify-center px-8"
                 >
-                    <!-- Contenedor de imagen con overlay -->
                     <div class="relative">
-                        <!-- Spinner de carga -->
                         <div 
                             v-if="!isImageLoaded(index)"
                             class="absolute inset-0 flex items-center justify-center"
@@ -40,8 +36,6 @@
                                 ></path>
                             </svg>
                         </div>
-                        
-                        <!-- Imagen -->
                         <img 
                             :src="image" 
                             :alt="`${projectTitle} - Imagen ${index + 1}`"
@@ -49,14 +43,10 @@
                             @load="handleImageLoad($event, index)"
                             @error="handleImageError($event, index)"
                         />
-                        
-                        <!-- Overlay suave -->
                         <div class="absolute inset-0 bg-black/5 rounded-lg pointer-events-none"></div>
                     </div>
                 </div>
             </div>
-
-            <!-- Botones de navegación -->
             <button 
                 v-if="images.length > 1"
                 @click.stop="previousImage"
@@ -76,8 +66,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
-
-            <!-- Indicadores -->
             <div 
                 v-if="images.length > 1"
                 class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full"

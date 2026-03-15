@@ -1,6 +1,5 @@
 <template>
     <section id="contacto" class="py-20 bg-gray-850 relative overflow-hidden">
-        <!-- Particles Container -->
         <ParticlesBackground 
             container-id="contacto"
             :config="{
@@ -18,7 +17,6 @@
             <h2 class="text-3xl font-bold text-center mb-12">Contacto</h2>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
                 <div class="card">
                     <h3 class="text-2xl font-bold text-white mb-6">Envíame un mensaje</h3>
                     
@@ -83,7 +81,6 @@
                     </form>
                 </div>
                 
-                <!-- Contact Information -->
                 <div class="space-y-8">
                     <div class="card">
                         <h3 class="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
@@ -129,7 +126,6 @@
                         </div>
                     </div>
                     
-                    <!-- Social Links -->
                     <div class="card">
                         <h3 class="text-2xl font-bold text-white mb-6">Sígueme</h3>
                         
@@ -174,13 +170,10 @@ const form = ref({
 const submitForm = async () => {
     loading.value = true;
     
-    // Simular envío del formulario
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Aquí iría la lógica real de envío del formulario
     console.log('Formulario enviado:', form.value);
     
-    // Resetear formulario
     form.value = {
         name: '',
         email: '',
@@ -190,7 +183,6 @@ const submitForm = async () => {
     
     loading.value = false;
     
-    // Mostrar mensaje de éxito
     alert('¡Mensaje enviado con éxito!');
 };
 </script>

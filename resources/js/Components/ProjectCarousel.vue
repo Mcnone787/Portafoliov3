@@ -1,8 +1,6 @@
 <template>
     <div class="relative" :class="[isModal ? 'h-full' : 'aspect-[16/9]']">
-        <!-- Carrusel Container -->
         <div class="relative h-full overflow-hidden rounded-lg bg-gray-900">
-            <!-- Imágenes -->
             <div 
                 class="flex h-full transition-transform duration-500 ease-in-out"
                 :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
@@ -13,7 +11,6 @@
                     class="w-full flex-shrink-0 h-full"
                 >
                     <div class="relative w-full h-full">
-                        <!-- Spinner de carga -->
                         <div 
                             v-if="!isImageLoaded(index)"
                             class="absolute inset-0 flex items-center justify-center"
@@ -40,7 +37,6 @@
                             </svg>
                         </div>
                         
-                        <!-- Imagen -->
                         <img 
                             :src="image" 
                             :alt="`${projectTitle} - Imagen ${index + 1}`"
@@ -52,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- Overlay con información -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div class="absolute bottom-4 left-4 right-4">
                     <h3 class="text-white font-semibold text-lg">{{ projectTitle }}</h3>
@@ -60,7 +55,6 @@
                 </div>
             </div>
 
-            <!-- Botones de navegación -->
             <button 
                 v-if="images.length > 1"
                 @click.stop="previousImage"
@@ -81,7 +75,6 @@
                 </svg>
             </button>
 
-            <!-- Indicadores -->
             <div 
                 v-if="images.length > 1"
                 class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"
@@ -96,7 +89,6 @@
             </div>
         </div>
 
-        <!-- Controles de teclado y touch -->
         <div 
             class="absolute inset-0"
             @keydown.left="previousImage"
@@ -214,7 +206,6 @@ const handleSwipe = () => {
     }
 };
 
-// Observar cambios en isHovered para iniciar/detener el autoplay
 watch(() => props.isHovered, (newValue) => {
     if (newValue) {
         startAutoPlay();

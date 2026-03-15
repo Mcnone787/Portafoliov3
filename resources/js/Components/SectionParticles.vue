@@ -35,7 +35,6 @@ const initParticles = () => {
     const ctx = canvas.getContext('2d');
     const particleArray = [];
     
-    // Ajustar el tamaño del canvas
     const resizeCanvas = () => {
         canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
@@ -44,7 +43,6 @@ const initParticles = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Crear partículas
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -72,14 +70,12 @@ const initParticles = () => {
         }
     }
 
-    // Inicializar partículas
     const init = () => {
         for (let i = 0; i < 50; i++) {
             particleArray.push(new Particle());
         }
     };
 
-    // Animar partículas
     const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
@@ -87,7 +83,6 @@ const initParticles = () => {
             particleArray[i].update();
             particleArray[i].draw();
             
-            // Dibujar líneas entre partículas cercanas
             for (let j = i; j < particleArray.length; j++) {
                 const dx = particleArray[i].x - particleArray[j].x;
                 const dy = particleArray[i].y - particleArray[j].y;

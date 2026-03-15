@@ -2,11 +2,9 @@
     <Head title="Adrià Moya" />
     
     <div class="min-h-screen bg-gray-850">
-        <!-- Navigation -->
         <SideNavigation @navigate="scrollToSection" />
         <MobileNavigation @navigate="scrollToSection" />
 
-        <!-- Progress Bar -->
         <div class="fixed top-0 left-0 w-full h-1 bg-gray-750 z-40">
             <div 
                 class="h-full bg-primary transition-all duration-300"
@@ -14,14 +12,12 @@
             ></div>
         </div>
 
-        <!-- Sections -->
         <HeroSection @navigate="scrollToSection" />
         <ProjectsSection />
         <SkillsSection />
         <AboutSection @navigate="scrollToSection" />
         <ContactSection />
 
-        <!-- Scroll to Top Button -->
         <transition
             enter-active-class="transition duration-300 ease-out"
             enter-from-class="transform translate-y-10 opacity-0"
@@ -68,11 +64,8 @@ import AboutSection from '@/Components/sections/AboutSection.vue';
 import ContactSection from '@/Components/sections/ContactSection.vue';
 
 const { scrollProgress, activeSection, scrollToSection } = useNavigation();
-
-// Mostrar el botón solo cuando no estemos en la sección de inicio
 const showScrollTop = computed(() => activeSection.value !== 'inicio');
 
-// Función para hacer scroll suave hacia arriba
 const scrollToTop = () => {
     window.scrollTo({
         top: 0,

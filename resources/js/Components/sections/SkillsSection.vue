@@ -1,7 +1,6 @@
 <template>
     <section id="habilidades" class="py-20 bg-gray-850 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <!-- Particles Container -->
             <ParticlesBackground 
                 container-id="habilidades"
                 :config="{
@@ -18,7 +17,6 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl font-bold text-center mb-12">Habilidades</h2>
-            <!-- Tabs de categorías -->
             <div class="flex flex-wrap gap-3 sm:gap-4 mb-8 justify-center">
                 <button
                     v-for="cat in categoriesList"
@@ -32,13 +30,10 @@
                 </button>
             </div>
 
-            <!-- Contenido de la categoría seleccionada -->
             <div class="relative min-h-[400px]">
                 <transition name="fade-scale" mode="out-in">
                     <div :key="selectedCategory" class="w-full">
-                        <!-- Web Development Columns -->
                         <div v-if="selectedCategory === 'web'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-start max-w-6xl mx-auto">
-                            <!-- Frontend Column -->
                             <div class="card h-fit">
                                 <h3 class="text-lg sm:text-xl font-semibold text-white mb-4 flex items-center gap-2">
                                     <TechIcon name="frontend" class="w-5 sm:w-6 h-5 sm:h-6" />
@@ -77,7 +72,6 @@
                                 </div>
                             </div>
 
-                            <!-- Backend Column -->
                             <div class="card h-fit">
                                 <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                                     <TechIcon name="backend" class="w-6 h-6" />
@@ -116,7 +110,6 @@
                                 </div>
                             </div>
 
-                            <!-- DevOps Column -->
                             <div class="card h-fit">
                                 <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                                     <TechIcon name="devops" class="w-6 h-6" />
@@ -156,7 +149,6 @@
                             </div>
                         </div>
 
-                        <!-- Other Categories -->
                         <div v-else class="flex justify-center">
                             <div class="card w-full max-w-3xl">
                                 <h3 class="text-lg sm:text-xl font-semibold text-white mb-4 flex items-center gap-2">
